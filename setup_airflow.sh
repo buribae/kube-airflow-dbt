@@ -18,5 +18,8 @@ docker exec $AIRFLOW_CONTAINER sh -cx "mkdir -p /usr/local/airflow/.kube/ && ech
 # install additional python packages
 docker exec $AIRFLOW_CONTAINER sh -cx "pip install -r requirements.txt"
 
+# run airflow with local executor
+#docker exec $AIRFLOW_CONTAINER sh -cx "sed -i 's/executor = SequentialExecutor/executor = LocalExecutor/' /usr/local/airflow/airflow.cfg"
+
 # run airflow list_dags
 docker exec $AIRFLOW_CONTAINER airflow list_dags
