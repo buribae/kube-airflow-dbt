@@ -3,7 +3,7 @@
 ### Requirements
 - [rancher/k3d](https://github.com/rancher/k3d)
 - [docker](https://docs.docker.com/get-docker/)
-
+- dbt
 ### How to run dags with puckel/docker-airflow
 
 ```sh
