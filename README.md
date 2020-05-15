@@ -17,10 +17,6 @@ source setup_airflow.sh
 # ./run.sh [dag_name] [task_name]
 ./run.sh dbt_kube_dag dbt-debug
 
-# 4. look up the log with log.sh
-./log.sh 1
-
-# 5. clear airflow dag
-# sqlite doesn't support local executor
-./clean.sh dbt_kube_dag
+# 4. look up the last log with log.sh
+./log.sh
 ```
