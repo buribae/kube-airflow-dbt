@@ -1,26 +1,26 @@
 # kube-airflow
 
-### Dependencies
+### Requirements
 - [rancher/k3d](https://github.com/rancher/k3d)
 - [docker](https://docs.docker.com/get-docker/)
 
-```sh
+### How to run dags with puckel/docker-airflow
 
-# pull down docker-airflow image
+```sh
+# 1. pull down docker-airflow image
 ./init_airflow.sh
 
-# setup airflow - copy dags, kube config, install python packages
+# 2. setup airflow - copy dags, kube config, install python packages
 source setup_airflow.sh
 
-# run dbt_kube_dag in dags folder
+# 3. run dbt_kube_dag in dags folder
 # ./run.sh [dag_name] [task_name]
 ./run.sh dbt_kube_dag dbt-debug
 
-# see 1.log using log.sh
+# 4. look up the log with log.sh
 ./log.sh 1
 
-# clear airflow dag
+# 5. clear airflow dag
 # sqlite doesn't support local executor
 ./clean.sh dbt_kube_dag
-
 ```

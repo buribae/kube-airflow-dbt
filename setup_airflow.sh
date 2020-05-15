@@ -4,7 +4,7 @@
 export AIRFLOW_CONTAINER="$(docker ps -qf ancestor=puckel/docker-airflow)"
 
 # copy airflow dags
-docker cp ./dags $AIRFLOW_CONTAINER:/usr/local/airflow/dags
+docker cp ./dags $AIRFLOW_CONTAINER:/usr/local/airflow/
 
 # copy requirements.txt
 docker cp ./requirements.txt $AIRFLOW_CONTAINER:/usr/local/airflow/requirements.txt
