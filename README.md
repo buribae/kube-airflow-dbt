@@ -15,7 +15,7 @@ source setup_airflow.sh
 
 # 3. run dbt_kube_dag in dags folder
 # ./run.sh [dag_name] [task_name]
-./run.sh dbt_kube_dag dbt-debug
+./run.sh dbt_kube_dag dbt_debug
 
 # 4. look up the last log with log.sh
 ./log.sh
