@@ -10,10 +10,11 @@
 ./init_airflow.sh
 
 # setup airflow - copy dags, kube config, install python packages
-./setup_airflow.sh
+source setup_airflow.sh
 
 # run dbt_kube_dag in dags folder
-./run.sh
+# ./run.sh [dag_name] [task_name]
+./run.sh dbt_kube_dag dbt-debug
 
 # see 1.log using log.sh
 ./log.sh 1
