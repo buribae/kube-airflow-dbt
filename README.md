@@ -1,5 +1,9 @@
 # kube-airflow
 
+### Dependencies
+- [rancher/k3d](https://github.com/rancher/k3d)
+- [docker](https://docs.docker.com/get-docker/)
+
 ```sh
 
 # pull down docker-airflow image
