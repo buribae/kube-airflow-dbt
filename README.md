@@ -7,16 +7,15 @@
 ### How to run dags with puckel/docker-airflow
 
 ```sh
-# 1. pull down docker-airflow image
-./init_airflow.sh
+# Initialize docker-airflow, docker-dbt
+# Copy dags, kube config into running container
+# Install python packages
+source init_airflow.sh
 
-# 2. setup airflow - copy dags, kube config, install python packages
-source setup_airflow.sh
-
-# 3. run dbt_kube_dag in dags folder
+# To run airflow task in dag
 # ./run.sh [dag_name] [task_name]
 ./run.sh dbt_kube_dag dbt_debug
 
-# 4. look up the last log with log.sh
+# Look up the last log with log.sh
 ./log.sh
 ```
