@@ -1,4 +1,4 @@
-# kube-airflow
+# kube-airflow-dbt
 
 ### Requirements
 - [rancher/k3d](https://github.com/rancher/k3d)
